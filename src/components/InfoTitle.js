@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-function CompInfoTitle ({className = ""}) {
+function CompInfoTitle ({className = "", selectMBTI}) {
+  
   return (
     <div className={className}>
       <div>
@@ -8,6 +9,7 @@ function CompInfoTitle ({className = ""}) {
           MBTI별
           <br/>
           <span>좋아하는 색</span>
+          {selectMBTI}
         </h1>
       </div>
     </div>)

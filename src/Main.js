@@ -22,7 +22,6 @@ function Main () {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>  
-            <Route index element={<IndexPage />} /> 
             <Route path="color-surveys" element={<IndexPage />} /> 
             <Route path="color-surveys/new" element={<NewInputPage />} />
           </Route>

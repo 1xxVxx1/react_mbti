@@ -3,7 +3,7 @@ import { getSurveys } from "../api/api";
 import { useEffect, useState } from "react";
 
 
-function MBTILists () {
+function MBTILists ({ onClick }) {
   const [surveys, setSurveys] = useState([]);
 
   const handleLoad = async () => {
@@ -16,7 +16,7 @@ function MBTILists () {
   }, [])
 
   return (
-    <MBTIList surveys={surveys}/>
+    <MBTIList surveys={surveys} onClick={onClick}/>
   )
 };
 

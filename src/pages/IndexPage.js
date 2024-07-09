@@ -1,13 +1,18 @@
 import InfoTitle from "../components/InfoTitle";
 import MBTIPart from "../components/MBTIPart";
 import styled from "styled-components";
+import { useState } from"react";
 
 
 function MainPage ({className=""}) {
+  const [selectMBTI, setSelectMBTI] = useState();
+  const handleClick = (e) => {
+    setSelectMBTI(e.target.innerText);
+  };
   return (
     <div className={className}>
-      <InfoTitle />
-      <MBTIPart />
+      <InfoTitle selectMBTI={selectMBTI}/>
+      <MBTIPart onClick={handleClick}/>
     </div>
   )
 };

@@ -3,11 +3,12 @@ import MBTILists from "./MBTILists";
 import styled from "styled-components";
 
 
-function CompMBTIPart ({className = ""}) {
+function CompMBTIPart ({className = "", onClick}) {
+  
   return (
     <div className={className}>
       <NewInputLink />
-      <MBTILists />
+      <MBTILists onClick={onClick}/>
     </div>
   )
 };
