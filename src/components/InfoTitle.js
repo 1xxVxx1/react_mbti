@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import deleteIcon from "../assets/images/x.svg";
 
-function CompInfoTitle ({className = "", selectMBTI}) {
+function CompInfoTitle ({className = "", selectMBTI, onDelete}) {
+
+  const HandleDelete = (e) => {
+    onDelete("");
+  };
   
   return (
     <div className={className}>
@@ -9,7 +14,7 @@ function CompInfoTitle ({className = "", selectMBTI}) {
           MBTI별
           <br/>
           <span>좋아하는 색</span>
-          {selectMBTI}
+          {selectMBTI && <div>{selectMBTI}<img src={deleteIcon} alt="delete-icon" onClick={HandleDelete}/></div>}
         </h1>
       </div>
     </div>)
@@ -19,7 +24,7 @@ const InfoTitle = styled(CompInfoTitle)`
   width: 297px;
   color: #464E5E;
   text-align: right;
-  div {
+  &>div {
     border-radius: 80px;
     background-color: #F5F7FB;
     height: 288px;

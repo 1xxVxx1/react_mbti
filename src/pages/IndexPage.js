@@ -11,7 +11,7 @@ function MainPage ({className=""}) {
   };
   return (
     <div className={className}>
-      <InfoTitle selectMBTI={selectMBTI}/>
+      <InfoTitle selectMBTI={selectMBTI} onDelete={setSelectMBTI}/>
       <MBTIPart onClick={handleClick}/>
     </div>
   )
