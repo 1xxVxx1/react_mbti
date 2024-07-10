@@ -21,4 +21,6 @@ Environment(Runtime): Node.js
 
 > Object of Project
  1. Practice Useage of React and Frontend Tool-kits
- 2. Finding tech State and problem of During Programming, by making FE Mini servise 
+ 2. Finding tech State and problem of During Programming, by making FE Mini servise
+
+// For using Typescript, New Commint in "https://github.com/1xxVxx1/type_mbti/"
