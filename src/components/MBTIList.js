@@ -7,15 +7,21 @@ function ComMBTIList ({surveys, className = "", onClick}) {
   } 
   return (
     <ul className={className}>
-      {surveys.map((survey) => (
+      {surveys.map((survey) => {
+        const backColor = survey.colorCode;
+        const PickColor = styled.div`
+          background-color: ${backColor}
+        `;
+        return (
         <li>
           <div>{survey.id}</div>
           <div onClick={handleClick}>{survey.mbti}</div>
-          <div><img src={arrow} alt="arrow"/></div>
-          <div style={{backgroundColor: `${survey.colorCode}`}}></div>
+          <PickColor />
+          <img src={arrow} alt="arrow"/>
           <div>{survey.colorCode}</div>
         </li>
-      ))}
+      )
+      })}
     </ul>
   )
 };

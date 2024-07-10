@@ -6,6 +6,28 @@ function CompInfoTitle ({className = "", selectMBTI, onDelete}) {
   const HandleDelete = (e) => {
     onDelete("");
   };
+
+  const SelectedMBTI = styled.div`
+    text-align: right;
+    padding: 2px 0 2px 110px;
+    marin-top: 5px;
+    height: 50px;
+    div {
+      border-radius: 8px;
+      height: 100%;
+      line-heigh: 100%;
+      background-color: white;
+      display: inline-flex;
+      font-size: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      gap: 5px;
+      img {
+        width: 10px;
+      }
+    }
+  `;
   
   return (
     <div className={className}>
@@ -14,7 +36,15 @@ function CompInfoTitle ({className = "", selectMBTI, onDelete}) {
           MBTI별
           <br/>
           <span>좋아하는 색</span>
-          {selectMBTI && <div>{selectMBTI}<img src={deleteIcon} alt="delete-icon" onClick={HandleDelete}/></div>}
+          {
+          selectMBTI 
+          && 
+          (<SelectedMBTI>
+            <div>
+              {selectMBTI}
+              <img src={deleteIcon} alt="delete-icon" onClick={HandleDelete}/>
+            </div>
+          </SelectedMBTI>)}
         </h1>
       </div>
     </div>)
